@@ -1,10 +1,12 @@
 <mat-card>
   <mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color" (mouseenter)="tile.tileHovered = 'active'" (mouseleave)="tile.tileHovered = 'inactive'" [@hoverState]="tile.tileHovered">
-      <span *ngIf="!tile.isImage">{{tile.text}}</span>
-      <img *ngIf="tile.isImage" [src]="tile.imgPath"/>
+    <mat-grid-tile *ngFor="let content of contents" [colspan]="content.tile.cols" [rowspan]="content.tile.rows" [style.background]="content.tile.color" (mouseenter)="content.tile.tileHovered = 'active'"
+      (mouseleave)="content.tile.tileHovered = 'inactive'" [@hoverState]="content.tile.tileHovered" (click)="toggleContent(content)">
+      <span *ngIf="!content.tile.isImage">{{content.tile.text}}</span>
+      <img *ngIf="content.tile.isImage" [src]="content.tile.imgPath" />
     </mat-grid-tile>
   </mat-grid-list>
-</mat-card>
-<app-contact>
-</app-contact>
+  <app-contact [@flyInOut]="contents[0].state" class="content" *ngIf="contents[0].state == 'in'">
+  </app-contact>
+  <app-projects [@flyInOut]="contents[1].state" class="content" *ngIf="contents[1].state == 'in'">
+  </app-projects>

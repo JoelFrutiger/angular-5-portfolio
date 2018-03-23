@@ -7,7 +7,8 @@ import {
   transition,
   group
 } from '@angular/animations';
-import { ContentComponent } from '../content/content.component';
+import { ContentService } from '../content.service';
+import { Content } from '../content/content';
 
 @Component({
   selector: 'app-nav-tiles',
@@ -30,29 +31,27 @@ import { ContentComponent } from '../content/content.component';
     ]),
     trigger('flyInOut', [
       state('in', style({ width: 120, transform: 'translateX(0)', opacity: 1 })),
+      // state('out', style({ width: 0 })),
       transition('void => *', [
-        style({ width: 10, transform: 'translateX(50px)', opacity: 0 }),
-        group([
-          animate('0.3s 0.1s ease', style({
-            transform: 'translateX(0)',
-            width: 120
-          })),
-          animate('0.3s ease', style({
-            opacity: 1
-          }))
-        ])
-      ]),
+        style({ 
+          //width:"1000px", 
+          transform:'translateX(1000px)', 
+          opacity:0
+         }),
+        animate('0.5s 0.3s ease', style({
+          transform: 'translateX(0)',
+          //width: "50px"
+        })),
+        animate('0.5s ease', style({
+          opacity: 1
+        }))
+      ])/*,
       transition('* => void', [
-        group([
-          animate('0.3s ease', style({
-            transform: 'translateX(50px)',
-            width: 10
-          })),
-          animate('0.3s 0.2s ease', style({
-            opacity: 0
-          }))
-        ])
-      ])
+        animate('0.3s ease', style({
+          transform: 'translateX(50px)',
+          width: 10
+        }))
+      ])*/
     ])
   ]
 })
@@ -66,11 +65,21 @@ export class NavTilesComponent implements OnInit {
     { text: 'Five', cols: 2, rows: 1, color: '#08734E', tileHovered: false },
   ];
 
-  allContent : ContentComponent[];
+  toggleContent(content: Content) {
+    this.contents.forEach(element => {
+      element.state = "out";
+    });
+    content.state = "in";
+  }
 
-  constructor() {
-    this.allContent.push(new ContentComponent());
-   
+  contents: Content[];
+
+  constructor(private contentService: ContentService) {
+    this.contents = this.contentService.getContent();
+    this.contents.forEach(function (data) {
+      console.log(data.tile);
+    })
+  }
 
   ngOnInit() {
   }
