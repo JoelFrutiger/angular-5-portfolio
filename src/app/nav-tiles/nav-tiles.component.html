@@ -1,0 +1,8 @@
+<mat-card>
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color" (mouseenter)="tile.tileHovered = 'active'" (mouseleave)="tile.tileHovered = 'inactive'" [@hoverState]="tile.tileHovered">
+      <span *ngIf="!tile.isImage">{{tile.text}}</span>
+      <img *ngIf="tile.isImage" [src]="tile.imgPath"/>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
