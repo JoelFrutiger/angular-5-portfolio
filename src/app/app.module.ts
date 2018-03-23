@@ -5,14 +5,16 @@ import {MatSidenavModule, MatGridListModule, MatCardModule} from '@angular/mater
 
 import { AppComponent } from './app.component';
 import { NavTilesComponent } from './nav-tiles/nav-tiles.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './content/contact/contact.component';
+import { ContentComponent } from './content/content.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavTilesComponent,
-    ContactComponent
+    ContactComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,MatGridListModule,MatCardModule
