@@ -24,34 +24,24 @@ import { Content } from '../content/content';
       state('active', style({
         zIndex: "1",
         boxShadow: "0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-        transform: 'scale(1.1)'
+        transform: 'scale(1.18)'
       })),
-      transition('inactive => active', animate('100ms ease-in')),
+      transition('inactive => active',
+        group([
+          animate('200ms ease-in', style({
+            zIndex: "1",
+            boxShadow: "0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+            transform: 'scale(1.2)'
+          })),
+          animate('20ms 200ms ease-in', style({
+            zIndex: "1",
+            boxShadow: "0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+            transform: 'scale(1.18)'
+          }
+          ))
+        ])
+      ),
       transition('active => inactive', animate('100ms ease-out'))
-    ]),
-    trigger('flyInOut', [
-      state('in', style({ width: 120, transform: 'translateX(0)', opacity: 1 })),
-      // state('out', style({ width: 0 })),
-      transition('void => *', [
-        style({ 
-          //width:"1000px", 
-          transform:'translateX(1000px)', 
-          opacity:0
-         }),
-        animate('0.5s 0.3s ease', style({
-          transform: 'translateX(0)',
-          //width: "50px"
-        })),
-        animate('0.5s ease', style({
-          opacity: 1
-        }))
-      ])/*,
-      transition('* => void', [
-        animate('0.3s ease', style({
-          transform: 'translateX(50px)',
-          width: 10
-        }))
-      ])*/
     ])
   ]
 })
