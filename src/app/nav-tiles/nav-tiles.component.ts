@@ -57,13 +57,6 @@ import { Content } from '../content/content';
 })
 export class NavTilesComponent implements OnInit {
 
-  tiles = [
-    { text: 'One', cols: 3, rows: 1, color: '#000000', tileHovered: false },
-    { text: 'Two', cols: 1, rows: 2, color: '#FFFFFF', tileHovered: false, isImage: false, imgPath: "assets/images/joel-frutiger-min.png" },
-    { text: 'Three', cols: 1, rows: 1, color: '#076645', tileHovered: false },
-    { text: 'Four', cols: 2, rows: 1, color: '#373B3A', tileHovered: false },
-    { text: 'Five', cols: 2, rows: 1, color: '#08734E', tileHovered: false },
-  ];
 
   toggleContent(content: Content) {
     this.contents.forEach(element => {

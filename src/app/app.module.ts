@@ -8,6 +8,8 @@ import { NavTilesComponent } from './nav-tiles/nav-tiles.component';
 import { ContactComponent } from './content/contact/contact.component';
 import { ContentService } from './content.service';
 import { ProjectsComponent } from './content/projects/projects.component';
+import { TitleComponent } from './title/title.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -15,10 +17,11 @@ import { ProjectsComponent } from './content/projects/projects.component';
     AppComponent,
     NavTilesComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    TitleComponent
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,MatGridListModule,MatCardModule
+    BrowserModule,BrowserAnimationsModule,MatGridListModule,MatCardModule, AppRoutingModule
   ],
   providers: [ContentService],
   bootstrap: [AppComponent]

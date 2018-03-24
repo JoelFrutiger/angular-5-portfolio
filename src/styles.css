@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 body{
     background:#373B3A;
+    font-family: 'Raleway',sans-serif !important;
+}
+mat-card{
+    margin-bottom: 10px;
 }
