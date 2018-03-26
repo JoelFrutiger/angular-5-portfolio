@@ -1,0 +1,15 @@
+.projPanel{
+    font-size: larger;
+    font-weight:bold;
+}
+.buttonRow{
+  justify-content: space-around;
+  margin-bottom: 50px;
+  background-color:#373B3A;
+}
+.mat-raised-button{
+  background-color:#373B3A;
+}
+.mat-raised-button.tagListButton:hover{
+    background-color:rgb(83, 90, 88);
+}

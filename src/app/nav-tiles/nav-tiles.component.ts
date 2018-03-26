@@ -59,9 +59,6 @@ export class NavTilesComponent implements OnInit {
 
   constructor(private contentService: ContentService) {
     this.contents = this.contentService.getContent();
-    this.contents.forEach(function (data) {
-      console.log(data.tile);
-    })
   }
 
   ngOnInit() {
