@@ -35,16 +35,14 @@ export class ProjectsComponent implements OnInit {
   }
 
   hasTag(project: Project) {
-    if(!this.filterActive){
+    if (!this.filterActive) {
       return true;
     }
-    project.tags.forEach(tag => {
-      if (this.selectedTags.includes(tag)) {
-        console.log("Project true: ",project.name,"Tag:",tag.name);
+    for (let i = 0; i < project.tags.length; i++) {
+      if (this.selectedTags.includes(project.tags[i])) {
         return true;
       }
-    })
-    console.log("Project false: ",project.name);
+    }
     return false;
   }
 
