@@ -7,6 +7,8 @@ import {
   transition,
   group
 } from '@angular/animations';
+import { Content } from '../content/content';
+import { ContentService } from '../content.service';
 
 @Component({
   selector: 'app-title',
@@ -32,8 +34,14 @@ import {
 })
 export class TitleComponent implements OnInit {
 
-  constructor() { }
 
+  contents: Content[];
+
+  constructor(private contentService: ContentService) {
+    this.contents = this.contentService.getContent();
+    //Remove content tile used for profile picture
+    this.contents.splice(1 ,1);
+  }
   ngOnInit() {
   }
 

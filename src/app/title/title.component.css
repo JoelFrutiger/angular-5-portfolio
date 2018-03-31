@@ -1,14 +1,39 @@
 
-.title {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    text-align: center;
-    font-family: 'Raleway',sans-serif !important;
-    font-size: 50px;
-    height:60px;
-    color: rgb(8, 115, 78);
-    word-break: break-all;
+@media (min-width:600px){
+    .mobileOnly{
+        visibility: hidden;
+        display: none;
+    }
+    .title {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        text-align: center;
+        font-family: 'Raleway',sans-serif !important;
+        font-size: 50px;
+        height:60px;
+        color: rgb(8, 115, 78);
+        word-break: break-all;
+    }
+}
+@media (max-width:600px){
+    .mobileOnly{
+        visibility: visible;
+        display: initial;
+        position: absolute;
+        right:20px;
+    }
+    .title {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        font-family: 'Raleway',sans-serif !important;
+        font-size: 20px;
+        color: rgb(8, 115, 78);
+        word-break: break-all;
+    }
+}
+.buttonColor{
+    background-color:#373B3A;
 }

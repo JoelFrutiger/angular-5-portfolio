@@ -1,18 +1,18 @@
 <mat-card>
 
   <div class="buttonRow">
-    <button class="tagListButton" *ngFor="let tag of tags" [style.color]="'#076645'" (click)="tag.toggleSelected()" mat-raised-button>
+    <button class="tagListButton" *ngFor="let tag of tags" [style.color]="'#076645'" (click)="toggleTag(tag)" mat-raised-button>
       <img [src]="tag.imgPath" />
       <span>{{tag.name}}</span>
     </button>
   </div>
-  <mat-expansion-panel *ngFor="let project of projects" class="projPanel" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+  <mat-expansion-panel *ngFor="let project of projects" class="projPanel" [style.display]="hasTag(project) ? 'flex' : 'none'" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
     <mat-expansion-panel-header>
       <mat-panel-title class="color1">
         {{project.name}}
       </mat-panel-title>
       <mat-panel-description>
-        <img class="pull-right" *ngFor="let tag of project.tags" [src]="tag.imgPath" />
+        <img class="pull-right panelImg" *ngFor="let tag of project.tags" [src]="tag.imgPath" />
       </mat-panel-description>
     </mat-expansion-panel-header>
     <p>{{project.desc}}

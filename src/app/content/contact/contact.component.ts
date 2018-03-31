@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from '../../contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  displayedColumns = [];
+  dataSource = []
 
-  constructor() { }
+  constructor(public contactService:ContactService) { 
+    this.displayedColumns = ['position', 'name'];
+    this.dataSource = this.contactService.getContactInfo();
+
+  }
 
   ngOnInit() {
   }

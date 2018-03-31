@@ -1,3 +1,14 @@
-<mat-card >
-  <p class="title" [@flyIn]="in" >Portfolio: Joël Frutiger</p>
+<mat-card>
+  <span class="title" [@flyIn]="in">Portfolio: Joël Frutiger</span>
+  <span class="mobileOnly">
+    <button class="buttonColor" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" yPositon="below" xPosition="before">
+      <button *ngFor="let content of contents" mat-menu-item [routerLink]="content.path">
+        <mat-icon>dialpad</mat-icon>
+        <span *ngIf="!content.tile.isImage">{{content.tile.text}}</span>
+      </button>
+    </mat-menu>
+  </span>
 </mat-card>

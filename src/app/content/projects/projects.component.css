@@ -13,3 +13,6 @@
 .mat-raised-button.tagListButton:hover{
     background-color:rgb(83, 90, 88);
 }
+.panelImg{
+    margin-left:20px;
+}

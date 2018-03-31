@@ -9,3 +9,8 @@ mat-card{
 .color1{
     color:#076645;
 }
+.cdk-overlay-backdrop, .cdk-overlay-pane {
+    position: absolute;
+    pointer-events: auto;
+    z-index: 1000;
+}
