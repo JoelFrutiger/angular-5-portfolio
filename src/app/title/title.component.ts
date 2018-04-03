@@ -39,17 +39,23 @@ export class TitleComponent implements OnInit {
   contents: Content[];
   private translate;
 
-  constructor(private contentService: ContentService,translate: TranslateService) {
+  constructor(private contentService: ContentService, translate: TranslateService) {
     this.contents = this.contentService.getContent();
     //Remove content tile used for profile picture
-    this.contents.splice(1 ,1);
+    this.contents.splice(1, 1);
 
     this.translate = translate;
     // this language will be used as a fallback when a translation isn't found in the current language
-    translate.setDefaultLang('en');
-
-    // the lang to use, if the lang isn't available, it will use the current loader to get them
-    translate.use('en');
+    if (translate.getBrowserLang() == 'de') {
+      translate.setDefaultLang('de');
+      // the lang to use, if the lang isn't available, it will use the current loader to get them
+      translate.use('de');
+    }
+    else{
+      translate.setDefaultLang('en');
+      // the lang to use, if the lang isn't available, it will use the current loader to get them
+      translate.use('en');
+    }
   }
 
 
@@ -59,10 +65,10 @@ export class TitleComponent implements OnInit {
   }
 
   toggleLanguage(language: string) {
-    if(this.translate.currentLang == "de"){
+    if (this.translate.currentLang == "de") {
       this.translate.use("en");
     }
-    else{
+    else {
       this.translate.use("de");
     }
   }
