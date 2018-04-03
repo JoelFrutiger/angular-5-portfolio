@@ -19,8 +19,49 @@
 .mat-expansion-panel-header.mat-expanded:focus, .mat-expansion-panel-header.mat-expanded:hover{
     background-color:#076645;
 }
-.panelImg{
-    margin-left:20px;
+@media (min-width:0px){
+    .panelImg{
+        margin-left:5px;
+    }
+    .hide400{
+        display:none;
+    }
+    .hide500{
+        display:none;
+    }
+}
+@media (min-width:500px){
+    .panelImg{
+        margin-left:5px;
+    }
+    .hide400{
+        display:initial;
+    }
+    .hide500{
+        display:none;
+    }
+}
+@media (min-width:800px){
+    .panelImg{
+        margin-left:10px;
+    }
+    .hide400{
+        display:initial;
+    }
+    .hide500{
+        display:initial;
+    }
+}
+@media (min-width:900px){
+    .panelImg{
+        margin-left:20px;
+    }
+    .hide400{
+        display:initial;
+    }
+    .hide500{
+        display:initial;
+    }
 }
 .tagActive{
     box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);

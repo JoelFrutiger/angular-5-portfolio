@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CvService } from '../../cv.service';
 
 @Component({
   selector: 'app-work',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkComponent implements OnInit {
 
-  constructor() { }
+  displayedColumns = [];
+  dataSource = []
+
+  constructor(public cvService:CvService) { 
+    this.displayedColumns = ['position', 'name'];
+    this.dataSource = this.cvService.getWorkExp();
+
+  }
 
   ngOnInit() {
   }

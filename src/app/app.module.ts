@@ -14,6 +14,7 @@ import { WorkComponent } from './content/work/work.component';
 import { ContactService } from './contact.service';
 import { MatIconModule } from '@angular/material/icon';
 import { AboutMeComponent } from './content/about-me/about-me.component';
+import { CvService } from './cv.service';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import { AboutMeComponent } from './content/about-me/about-me.component';
     MatIconModule,
     MatMenuModule
   ],
-  providers: [ContentService, ProjectService, ContactService],
+  providers: [ContentService, ProjectService, ContactService,CvService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

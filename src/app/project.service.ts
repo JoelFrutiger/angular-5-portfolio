@@ -31,7 +31,7 @@ export class ProjectService {
         "https://somedudes.ch/2016/07/01/manage-goals/", "/assets/images/project/manageGoals.png"),
       new Project("Kitchen pad", "Desc", [this.angular],
         "https://devpost.com/software/kitchen-pad", "/assets/images/project/kitchenpad.png"),
-      new Project("Various school / work projects", "Desc", [this.java,this.angular,this.android,this.ios,this.swift,this.php,this.c,this.powershell,this.python,this.bash],
+      new Project("Various school/work proj.", "Desc", [this.java,this.angular,this.android,this.ios,this.swift,this.php,this.c,this.powershell,this.python,this.bash],
         "https://github.com/JoelFrutiger", "/assets/images/project/various.png"),
       new Project("Various websites", "Desc", [this.wordpress],
         "https://somedudes.ch/2016/07/01/manage-goals/", "/assets/images/project/various.png")
