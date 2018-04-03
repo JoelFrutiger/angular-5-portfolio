@@ -9,11 +9,13 @@ import { CvService } from '../../cv.service';
 export class WorkComponent implements OnInit {
 
   displayedColumns = [];
-  dataSource = []
+  dataSourceWork = []
+  dataSourceEdu = []
 
   constructor(public cvService:CvService) { 
-    this.displayedColumns = ['position', 'name'];
-    this.dataSource = this.cvService.getWorkExp();
+    this.displayedColumns = ['dates','place','desc'];
+    this.dataSourceWork = this.cvService.getWorkExp();
+    this.dataSourceEdu = this.cvService.getEduExp();
 
   }
 

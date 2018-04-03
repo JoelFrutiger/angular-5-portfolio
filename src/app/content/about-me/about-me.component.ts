@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AboutService } from '../../about.service';
 
 @Component({
   selector: 'app-about-me',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor() { }
+  dataSourceInt = []
+  dataSourceLan = []
+  displayedColumns = []
+
+  constructor(public aboutService:AboutService) { 
+    this.displayedColumns = ['name', 'desc'];
+    this.dataSourceLan = this.aboutService.getLang();
+    this.dataSourceLan = this.aboutService.getInterests();
+
+  }
 
   ngOnInit() {
   }

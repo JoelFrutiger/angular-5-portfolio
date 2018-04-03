@@ -15,6 +15,7 @@ import { ContactService } from './contact.service';
 import { MatIconModule } from '@angular/material/icon';
 import { AboutMeComponent } from './content/about-me/about-me.component';
 import { CvService } from './cv.service';
+import { AboutService } from './about.service';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { CvService } from './cv.service';
     MatIconModule,
     MatMenuModule
   ],
-  providers: [ContentService, ProjectService, ContactService,CvService],
+  providers: [ContentService, ProjectService, ContactService,CvService,AboutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

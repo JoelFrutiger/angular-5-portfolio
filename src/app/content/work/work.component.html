@@ -1,23 +1,39 @@
 <mat-card>
   <mat-card-content>
+    <h1 class="color1">Work</h1>
     <div class="table-container mat-elevation-z8">
-      <mat-table #table [dataSource]="dataSource" class="color1bg">
-
-        <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
-        <!-- Position Column -->
-        <ng-container matColumnDef="position">
+      <mat-table #table [dataSource]="dataSourceWork" class="color1bg">
+        <ng-container matColumnDef="dates">
           <mat-header-cell *matHeaderCellDef></mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+          <mat-cell *matCellDef="let element"> {{element.dates}} </mat-cell>
         </ng-container>
-
-        <!-- Name Column -->
-        <ng-container matColumnDef="name">
+        <ng-container matColumnDef="place">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.place}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="desc">
           <mat-header-cell *matHeaderCellDef></mat-header-cell>
           <mat-cell *matCellDef="let element"> {{element.desc}} </mat-cell>
         </ng-container>
-
+        <!--<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>-->
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+    <h1 class="color1">Education</h1>
+    <div class="table-container mat-elevation-z8">
+      <mat-table #table [dataSource]="dataSourceEdu" class="color1bg">
+        <ng-container matColumnDef="dates">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.dates}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="place">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.place}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="desc">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.desc}} </mat-cell>
+        </ng-container>
         <!--<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>-->
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>
