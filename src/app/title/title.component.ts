@@ -57,6 +57,16 @@ export class TitleComponent implements OnInit {
     this.translate.use(language);
     console.log(this.translate);
   }
+
+  toggleLanguage(language: string) {
+    if(this.translate.currentLang == "de"){
+      this.translate.use("en");
+    }
+    else{
+      this.translate.use("de");
+    }
+  }
+
   ngOnInit() {
   }
 

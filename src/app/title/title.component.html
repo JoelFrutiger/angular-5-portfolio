@@ -1,6 +1,10 @@
 <mat-card>
   <span class="title" [@flyIn]="in">Portfolio: Joël Frutiger</span>
-  <button (click)="switchLanguage('de')">de</button>
+  <button mat-button (click)="toggleLanguage()" class="langToggle">
+    <span [ngClass]="{'selected':translate.currentLang == 'en'}">En</span>
+    <span>/</span>
+    <span [ngClass]="{'selected':translate.currentLang == 'de'}">De</span>
+  </button>
   <span class="mobileOnly">
     <button class="buttonColor" mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>more_vert</mat-icon>
