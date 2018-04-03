@@ -9,6 +9,7 @@ import {
 } from '@angular/animations';
 import { Content } from '../content/content';
 import { ContentService } from '../content.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-title',
@@ -36,11 +37,25 @@ export class TitleComponent implements OnInit {
 
 
   contents: Content[];
+  private translate;
 
-  constructor(private contentService: ContentService) {
+  constructor(private contentService: ContentService,translate: TranslateService) {
     this.contents = this.contentService.getContent();
     //Remove content tile used for profile picture
     this.contents.splice(1 ,1);
+
+    this.translate = translate;
+    // this language will be used as a fallback when a translation isn't found in the current language
+    translate.setDefaultLang('en');
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use('en');
+  }
+
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
+    console.log(this.translate);
   }
   ngOnInit() {
   }

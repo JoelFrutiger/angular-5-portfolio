@@ -64,7 +64,8 @@
       <mat-grid-tile *ngFor="let content of contents" [colspan]="content.tile.cols" [rowspan]="content.tile.rows" [style.background]="content.tile.color"
         (mouseenter)="content.tile.tileHovered = 'active'" (mouseleave)="content.tile.tileHovered = 'inactive'" [@hoverState]="content.tile.hoverable ? content.tile.tileHovered : 'out'"
         [routerLink]="content.path">
-        <h3 *ngIf="!content.tile.isImage">{{content.tile.text}}</h3>
+        <!--<mat-icon class="icon" *ngIf="!content.tile.isImage">{{content.icon}}</mat-icon>-->
+        <h3 *ngIf="!content.tile.isImage" translate>{{content.tile.text}}</h3>
         <img *ngIf="content.tile.isImage" [src]="content.tile.imgPath" class="portrait" />
       </mat-grid-tile>
     </mat-grid-list>

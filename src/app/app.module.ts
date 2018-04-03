@@ -16,7 +16,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { AboutMeComponent } from './content/about-me/about-me.component';
 import { CvService } from './cv.service';
 import { AboutService } from './about.service';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+    
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -39,9 +45,18 @@ import { AboutService } from './about.service';
     MatTableModule,
     MatTabsModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+        }
+      }
+    )
   ],
-  providers: [ContentService, ProjectService, ContactService,CvService,AboutService],
+  providers: [ContentService, ProjectService, ContactService, CvService, AboutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

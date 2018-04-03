@@ -11,3 +11,7 @@
     top:0px;
     max-height:350px;
 }
+.icon{
+    position: absolute;
+    top:10px;
+}

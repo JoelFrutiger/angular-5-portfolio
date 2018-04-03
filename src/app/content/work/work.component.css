@@ -1,3 +1,10 @@
 .mat-header-row, .mat-row{
     padding:5px 24px;
 }
+
+.mat-column-desc{
+  flex: 2;
+}
+.mat-column-dates{
+  flex: 0.5;
+}

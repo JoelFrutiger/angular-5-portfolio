@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavTilesComponent } from './nav-tiles/nav-tiles.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { NavTilesComponent } from './nav-tiles/nav-tiles.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+
 }
