@@ -15,7 +15,7 @@ export class AboutMeComponent implements OnInit {
   constructor(public aboutService:AboutService) { 
     this.displayedColumns = ['name', 'desc'];
     this.dataSourceLan = this.aboutService.getLang();
-    this.dataSourceLan = this.aboutService.getInterests();
+    this.dataSourceInt = this.aboutService.getInterests();
 
   }
 

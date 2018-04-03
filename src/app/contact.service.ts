@@ -6,7 +6,7 @@ export class ContactService {
 
   getContactInfo(){
     return [
-      new ContactEntry("E-Mail","j.frutiger@somedudes.ch"),
+      new ContactEntry("E-Mail","email"),
       new ContactEntry("LinkedIn","https://linkedin.com/joelfrutiger")
 
     ]
