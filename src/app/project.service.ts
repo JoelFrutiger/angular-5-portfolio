@@ -24,7 +24,6 @@ export class ProjectService {
   private js = new Tag("Javascript","/assets/images/tag/js.png")
   private mysql = new Tag("MySQL","/assets/images/tag/mysql.png")
 
-
   getProjects() {
     return [
       new Project("ToledoVR", "ToledoVR desc", [this.cSharp, this.unity],
