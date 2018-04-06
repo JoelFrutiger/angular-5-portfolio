@@ -1,29 +1,29 @@
 <mat-card>
   <mat-card-content>
-    <h1 class="color1">Freizeit</h1>
+    <h1 class="color1" translate>Interests</h1>
     <div class="table-container mat-elevation-z8">
       <mat-table #table [dataSource]="dataSourceInt" class="color1bg">
         <ng-container matColumnDef="name">
           <mat-header-cell *matHeaderCellDef></mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.area}} </mat-cell>
+          <mat-cell *matCellDef="let element" translate> {{element.area}} </mat-cell>
         </ng-container>
         <ng-container matColumnDef="desc">
           <mat-header-cell *matHeaderCellDef></mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.interests}} </mat-cell>
+          <mat-cell *matCellDef="let element" translate> {{element.interests}} </mat-cell>
         </ng-container>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>
     </div>
-    <h1 class="color1">Sprachen</h1>
+    <h1 class="color1" translate>Languages</h1>
     <div class="table-container mat-elevation-z8">
       <mat-table #table [dataSource]="dataSourceLan" class="color1bg">
         <ng-container matColumnDef="name">
           <mat-header-cell *matHeaderCellDef></mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.language}} </mat-cell>
+          <mat-cell *matCellDef="let element" translate> {{element.language}} </mat-cell>
         </ng-container>
         <ng-container matColumnDef="desc">
           <mat-header-cell *matHeaderCellDef></mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.level}} </mat-cell>
+          <mat-cell *matCellDef="let element" translate> {{element.level}} </mat-cell>
         </ng-container>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>

@@ -10,7 +10,7 @@
   <mat-expansion-panel *ngFor="let project of projects" class="projPanel" [style.display]="hasTag(project) ? '' : 'none'" (opened)="panelOpenState = true"
     (closed)="panelOpenState = false">
     <mat-expansion-panel-header class="color1bg">
-      <mat-panel-title>
+      <mat-panel-title translate>
         {{project.name}}
       </mat-panel-title>
       <mat-panel-description class="projDesc">

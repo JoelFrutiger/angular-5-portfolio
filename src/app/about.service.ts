@@ -7,18 +7,18 @@ export class AboutService {
 
   getLang(){
     return [
-      new Language("Deutsch","Muttersprache"),
-      new Language("English","fliessend (First Certificate)"),
-      new Language("Französisch","gute Kenntnisse"),
-      new Language("Spanisch","Grundkenntnisse")
+      new Language("German","Mother language"),
+      new Language("English","Fluid"),
+      new Language("Französisch","Good knowlege"),
+      new Language("Spanish","Basic knowlege")
     ]
   }
 
   getInterests(){
     return [
-      new Interest("Sport","Fussball, Surfen, Skifahren, Breakdance, Capoeira"),
-      new Interest("Kultur","Lesen, Reisen, Film, Konzerte besuchen"),
-      new Interest("IT","Kryptowährungen, Virtual Reality")
+      new Interest("Sport","Sports"),
+      new Interest("Kultur","Cultures"),
+      new Interest("IT","ITs")
     ]
   }
 
