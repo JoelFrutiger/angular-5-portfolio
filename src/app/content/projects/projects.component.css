@@ -21,6 +21,7 @@
 }
 .projImg{
     max-height:100px;
+    max-width:100px;
 }
 .projImgPos{
     position: absolute;

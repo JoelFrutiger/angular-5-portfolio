@@ -31,7 +31,7 @@ export class ProjectService {
       new Project("Cryptocurrency review", "cryptoDesc", [this.angular, this.php,this.js,this.ts,this.mysql],
         "https://cryptreview.com", "/assets/images/project/ccr.png"),
       new Project("Manage goals", "Desc", [this.android, this.java, this.nodejs, this.couchbase,this.js,this.mysql],
-        "https://somedudes.ch/2016/07/01/manage-goals/", "/assets/images/project/manageGoals.png"),
+        "https://somedudes.ch/2016/07/01/manage-goals/", "/assets/images/project/mg.jpg"),
       new Project("Kitchen pad", "Desc", [this.angular,this.js],
         "https://devpost.com/software/kitchen-pad", "/assets/images/project/kitchenpad.png"),
       new Project("Portfolio","protfolioDesc",[this.angular,this.ts]),
