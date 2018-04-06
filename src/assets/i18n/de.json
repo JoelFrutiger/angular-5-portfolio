@@ -8,7 +8,7 @@
     "Interests":"Freizeit",
     "Languages":"Sprachen",
     "Various websites":"Versch. websites",
-    "Various school/work proj.":"Versch. Schul/Arbeitsprojekte",
+    "Various school/work proj.":"Versch. Schul-Arbeitsprojekte",
     "Bachelor Computer Science":"Bachelor of Science in Informatik",
     "German":"Deutsch",
     "English":"Englisch",
@@ -21,5 +21,14 @@
     "Culture":"Kultur",
     "Sports":"Sport, Fussball, Surfen, Skifahren, Breakdance, Capoeira",
     "Cultures":"Lesen, Reisen, Film, Konzerte besuchen",
-    "ITs":"Kryptowährungen, Virtual Reality"
+    "ITs":"Kryptowährungen, Virtual Reality",
+    "nyp":"Anstellung als Systemadministrator / Entwickler, bearbeiten von Supportanfragen, Wartung / Inbetriebnahme von Netzwerken, Planung und Durchführung von Projekten. Seit 2016: Entwicklung und Ausbildung in den Bereichen Java, iOS, Web und Datenbanken.",
+    "nyplehre":"Berufslehre zum Informatiker EFZ mit Schwerpunkt Systemtechnik. Bearbeiten von Supportanfragen, Wartung / Inbetriebnahme von Netzwerken, Planung und Durchführung von Projekten.",
+    "prakti":"Einmonatiges Praktikum als Kaufmann bei Office für Büroarbeiten in Thun.",
+    "cwa":"Zwei Wochen handwerkliche Tätigkeit.",
+    "bach":"Bachelor Computer Science",
+    "info":"Informatiker EFZ",
+    "bms":"Technische Berufsmaturität",
+    "diplom":"Kaufmännisches Diplom",
+    "toledoDesc":"ToledoVR ist ein Action/Strategie Spiel für die HTC Vive. Spiele als Gott von oben and kämpfe als Held auf dem Boden. Spielbar in VR und auf dem PC gleichzeitig (lokaler Multiplayer)."
 }

@@ -26,15 +26,15 @@ export class ProjectService {
 
   getProjects() {
     return [
-      new Project("ToledoVR", "ToledoVR desc", [this.cSharp, this.unity],
-        "https://steam.com", "/assets/images/project/toledovr.png"),
-      new Project("Cryptocurrency review", "Cryptoreview desc ", [this.angular, this.php,this.js,this.ts,this.mysql],
-        "https://cryptreview.com", "/assets/images/project/cryptreview.png"),
+      new Project("ToledoVR", "toledoDesc", [this.cSharp, this.unity],
+        "https://store.steampowered.com/app/557460/ToledoVR/", "/assets/images/project/toledovr.png"),
+      new Project("Cryptocurrency review", "cryptoDesc", [this.angular, this.php,this.js,this.ts,this.mysql],
+        "https://cryptreview.com", "/assets/images/project/ccr.png"),
       new Project("Manage goals", "Desc", [this.android, this.java, this.nodejs, this.couchbase,this.js,this.mysql],
         "https://somedudes.ch/2016/07/01/manage-goals/", "/assets/images/project/manageGoals.png"),
-      new Project("Kitchen pad", "Desc", [this.angular],
+      new Project("Kitchen pad", "Desc", [this.angular,this.js],
         "https://devpost.com/software/kitchen-pad", "/assets/images/project/kitchenpad.png"),
-      new Project("Portfolio","Desc",[this.angular,this.ts]),
+      new Project("Portfolio","protfolioDesc",[this.angular,this.ts]),
       new Project("Various school/work proj.", "Desc", [this.java,this.angular,this.android,this.ios,this.swift,this.php,this.c,this.powershell,this.python,this.bash, this.js,this.mysql],
         "https://github.com/JoelFrutiger", "/assets/images/project/various.png"),
       new Project("Various websites", "Desc", [this.wordpress,this.mysql],

@@ -17,7 +17,7 @@ export class AboutService {
   getInterests(){
     return [
       new Interest("Sport","Sports"),
-      new Interest("Kultur","Cultures"),
+      new Interest("Culture","Cultures"),
       new Interest("IT","ITs")
     ]
   }

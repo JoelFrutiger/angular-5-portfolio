@@ -19,6 +19,20 @@
 .mat-expansion-panel-header.mat-expanded:focus, .mat-expansion-panel-header.mat-expanded:hover{
     background-color:#076645;
 }
+.projImg{
+    max-height:100px;
+}
+.projImgPos{
+    position: absolute;
+    right:50px;
+}
+.projectDesc{
+    margin-right:100px;
+}
+.projUrl{
+    color:black;
+}
+
 @media (min-width:0px){
     .panelImg{
         margin-left:5px;
