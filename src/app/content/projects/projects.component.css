@@ -1,8 +1,10 @@
 .projPanel{
-    font-size: larger;
-    font-weight:bold;
     margin-bottom: 20px;
     line-height:1.5;
+}
+.projPanelHeader{
+    font-size: larger;
+    font-weight:bold;
 }
 .buttonRow{
   justify-content: space-around;
@@ -21,7 +23,8 @@
 }
 .projImg{
     max-height:100px;
-    max-width:100px;
+    max-width
+    :100px;
 }
 .projImgPos{
     position: absolute;
@@ -87,4 +90,7 @@
     position: absolute;
     right:50px;
 
+}
+.panelWorkImg{
+    line-height: 0;
 }

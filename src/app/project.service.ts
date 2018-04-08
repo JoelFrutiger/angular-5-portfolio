@@ -46,7 +46,14 @@ export class ProjectService {
 
   getWorkProjects() {
     return [
-      new WorkProject([],"Desc")
+      new WorkProject([this.angular],"reportDesc"),
+      new WorkProject([this.ios,this.swift],"appDesc"),
+      new WorkProject([this.c],"cpuDesc"),
+      new WorkProject([this.java],"xelhaDesc"),
+      new WorkProject([this.java],"vaadinDesc"),
+      new WorkProject([this.python],"testautoDesc"),
+      new WorkProject([this.bash,this.mysql],"webmasterDesc"),
+      new WorkProject([this.powershell],"accautoDesc")
     ]
   }
 }

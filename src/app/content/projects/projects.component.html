@@ -9,7 +9,7 @@
   </div>
   <mat-expansion-panel *ngFor="let project of projects" class="projPanel color2bg" [style.display]="hasTag(project) ? '' : 'none'"
     (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-    <mat-expansion-panel-header class="color1bg">
+    <mat-expansion-panel-header class="projPanelHeader color1bg">
       <mat-panel-title translate>
         {{project.name}}
       </mat-panel-title>
@@ -25,20 +25,21 @@
     <p *ngIf="project.desc != ''" class="projectDesc" translate>{{project.desc}}
     </p>
     <p>
-    <mat-table #table *ngIf="project.desc == ''" [dataSource]="workProjects" class="color1bg">
-      <ng-container matColumnDef="position">
-        <mat-header-cell *matHeaderCellDef></mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.tags}} </mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef></mat-header-cell>
-        <mat-cell *matCellDef="let element">
-          {{element.desc}}
-        </mat-cell>
-      </ng-container>
-      <!--<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>-->
-      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    </mat-table>
+      <mat-table #table *ngIf="project.desc == ''" [dataSource]="workProjects" class="color1bg">
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element" class="panelWorkImg">
+            <img *ngFor="let tag of element.tags" class="panelWorkImg panelImg" [src]="tag.imgPath" />
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{element.desc}}
+          </mat-cell>
+        </ng-container>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
     </p>
     <iframe *ngIf="project.name == 'ToledoVR'" width="420" height="315" seamless="seamless" frameBorder="0" src="https://www.youtube.com/embed/36seVOeBBAU">
     </iframe>
