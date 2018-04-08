@@ -22,12 +22,31 @@
     <a class="projImgPos" [href]="project.url">
       <img class="projImg" [src]="project.imgPath" />
     </a>
-    <p class="projectDesc" translate>{{project.desc}}
+    <p *ngIf="project.desc != ''" class="projectDesc" translate>{{project.desc}}
+    </p>
+    <p>
+    <mat-table #table *ngIf="project.desc == ''" [dataSource]="workProjects" class="color1bg">
+      <ng-container matColumnDef="position">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.tags}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{element.desc}}
+        </mat-cell>
+      </ng-container>
+      <!--<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>-->
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
     </p>
     <iframe *ngIf="project.name == 'ToledoVR'" width="420" height="315" seamless="seamless" frameBorder="0" src="https://www.youtube.com/embed/36seVOeBBAU">
     </iframe>
     <p>
-      <a class="projUrl" [href]="project.url">{{project.url}}</a>
+      <a *ngFor="let url of project.url" class="projUrl" [href]="url">
+        <p>{{url}}</p>
+      </a>
+
     </p>
   </mat-expansion-panel>
 </mat-card>

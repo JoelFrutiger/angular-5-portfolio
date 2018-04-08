@@ -32,5 +32,9 @@
     "diplom":"Kaufmännisches Diplom",
     "toledoDesc":"ToledoVR ist ein Action/Strategie Spiel für die HTC Vive. Spiele als Gott von oben and kämpfe als Held auf dem Boden. Spielbar in VR und auf dem PC gleichzeitig (lokaler Multiplayer).",
     "cryptoDesc":"Ein ort zum lesen und schreiben von Bewertungen für Kryptowährungen. Jede Bewertung wird verifiziert und gute Bewertungen werden belohnt.",
-    "manageDesc":"Manage"
+    "manageDesc":"Goal Manager (abgestellt wegen Serverkosten)",
+    "portfolioDesc":"Diese Webseite, erstellt von Grund auf mit Angular 5",
+    "kitchenDesc":"Start Hack Project",
+    "variousDesc":"Verschiedene einfache Webseiten erstellt mit Wordpress"
+
 }

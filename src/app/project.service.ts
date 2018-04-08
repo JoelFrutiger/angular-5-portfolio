@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Tag } from './content/projects/tag';
 import { Project } from './content/projects/project';
+import { WorkProject } from './content/projects/workProject';
 
 @Injectable()
 export class ProjectService {
@@ -27,20 +28,26 @@ export class ProjectService {
   getProjects() {
     return [
       new Project("ToledoVR", "toledoDesc", [this.cSharp, this.unity],
-        "https://store.steampowered.com/app/557460/ToledoVR/", "/assets/images/project/toledovr.png"),
+        ["https://store.steampowered.com/app/557461/ToledoVR/"], "/assets/images/project/toledovr.png"),
       new Project("Cryptocurrency review", "cryptoDesc", [this.angular, this.php,this.js,this.ts,this.mysql],
-        "https://cryptreview.com", "/assets/images/project/ccr.png"),
-      new Project("Manage goals", "Desc", [this.android, this.java, this.nodejs, this.couchbase,this.js,this.mysql],
-        "https://somedudes.ch/2016/07/01/manage-goals/", "/assets/images/project/mg.jpg"),
-      new Project("Kitchen pad", "Desc", [this.angular,this.js],
-        "https://devpost.com/software/kitchen-pad", "/assets/images/project/kitchenpad.png"),
-      new Project("Portfolio","protfolioDesc",[this.angular,this.ts]),
-      new Project("Various school/work proj.", "Desc", [this.java,this.angular,this.android,this.ios,this.swift,this.php,this.c,this.powershell,this.python,this.bash, this.js,this.mysql],
-        "https://github.com/JoelFrutiger", "/assets/images/project/various.png"),
-      new Project("Various websites", "Desc", [this.wordpress,this.mysql],
-        "https://somedudes.ch/2016/07/01/manage-goals/", "/assets/images/project/various.png"),
+         ["https://cryptreview.com"], "/assets/images/project/ccr.png"),
+      new Project("Manage goals", "manageDesc", [this.android, this.java, this.nodejs, this.couchbase,this.js,this.mysql],
+        ["https://somedudes.ch/2016/07/01/manage-goals/"], "/assets/images/project/mg.jpg"),
+      new Project("Kitchen pad", "kitchenDesc", [this.angular,this.js],
+        ["https://devpost.com/software/kitchen-pad"], "/assets/images/project/kitchenpad.png"),
+      new Project("Portfolio","portfolioDesc",[this.angular,this.ts],["https://github.com/JoelFrutiger/angular-5-portfolio"]),
+      new Project("Various school/work proj.", "", [this.java,this.angular,this.android,this.ios,this.swift,this.php,this.c,this.powershell,this.python,this.bash, this.js,this.mysql],
+        ["https://github.com/JoelFrutiger"]),
+      new Project("Various websites", "variousDesc", [this.wordpress,this.mysql],
+        ["https://somedudes.ch","http://oeko-tec.ch"])
     ];
 
+  }
+
+  getWorkProjects() {
+    return [
+      new WorkProject([],"Desc")
+    ]
   }
 }
 

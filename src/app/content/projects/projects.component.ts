@@ -14,8 +14,10 @@ export class ProjectsComponent implements OnInit {
   tags: Tag[] = [];
   selectedTags: Tag[] = [];
   filterActive = false;
+  workProjects = [];
+  displayedColumns = [];
 
-  constructor(public projectService: ProjectService) {
+  constructor(public projectService: ProjectService){
     this.projects = this.projectService.getProjects()
     this.projects.forEach(project => {
       project.tags.forEach(tag => {
@@ -24,6 +26,8 @@ export class ProjectsComponent implements OnInit {
         }
       })
     })
+    this.workProjects = this.projectService.getWorkProjects();
+    this.displayedColumns = ['position', 'name'];
   }
 
   toggleTag(tag: Tag) {
