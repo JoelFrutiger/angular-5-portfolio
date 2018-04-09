@@ -13,7 +13,7 @@ export class ContentService {
       new Content(ProjectsComponent, 'Projects', "/projects", "view_list",
         new Tile('Projects', 3, 1, 'white', false)),
       new Content(ContactComponent, 'Contact', "/contact", "",
-        new Tile('Image', 1, 3, 'transparent', false, true, "assets/images/joel-frutiger-min-2.png", false)),
+        new Tile('Image', 1, 3, 'transparent', false, true, "assets/images/joel-frutiger-min.png", false)),
       new Content(ContactComponent, 'Contact', "/contact", "mail_outline",
         new Tile('Contact', 1, 1, '#076645', false)),
       new Content(AboutMeComponent, 'About me', '/aboutMe', "person_pin",
