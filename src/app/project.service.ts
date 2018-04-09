@@ -21,9 +21,10 @@ export class ProjectService {
   private powershell = new Tag("Powershell", "/assets/images/tag/powershell.png");
   private c = new Tag("C", "/assets/images/tag/c.png");
   private bash = new Tag("Bash", "/assets/images/tag/bash.png");
-  private ts = new Tag("Typescript","/assets/images/tag/ts.png")
-  private js = new Tag("Javascript","/assets/images/tag/js.png")
-  private mysql = new Tag("MySQL","/assets/images/tag/mysql.png")
+  private ts = new Tag("Typescript","/assets/images/tag/ts.png");
+  private js = new Tag("Javascript","/assets/images/tag/js.png");
+  private mysql = new Tag("MySQL","/assets/images/tag/mysql.png");
+  private jenkins = new Tag("Jenkins","/assets/images/tag/jenkins.png");
 
   getProjects() {
     return [
@@ -36,7 +37,7 @@ export class ProjectService {
       new Project("Kitchen pad", "kitchenDesc", [this.angular,this.js],
         ["https://devpost.com/software/kitchen-pad"], "/assets/images/project/kitchenpad.png"),
       new Project("Portfolio","portfolioDesc",[this.angular,this.ts],["https://github.com/JoelFrutiger/angular-5-portfolio"]),
-      new Project("Various school/work proj.", "", [this.java,this.angular,this.android,this.ios,this.swift,this.php,this.c,this.powershell,this.python,this.bash, this.js,this.mysql],
+      new Project("Various school/work proj.", "", [this.java,this.angular,this.android,this.ios,this.swift,this.php,this.c,this.powershell,this.python,this.bash, this.js,this.mysql,this.jenkins],
         ["https://github.com/JoelFrutiger"]),
       new Project("Various websites", "variousDesc", [this.wordpress,this.mysql],
         ["https://somedudes.ch","http://oeko-tec.ch"])
@@ -53,7 +54,8 @@ export class ProjectService {
       new WorkProject([this.java],"vaadinDesc"),
       new WorkProject([this.python],"testautoDesc"),
       new WorkProject([this.bash,this.mysql],"webmasterDesc"),
-      new WorkProject([this.powershell],"accautoDesc")
+      new WorkProject([this.powershell],"accautoDesc"),
+      new WorkProject([this.jenkins],"buildDesc")
     ]
   }
 }

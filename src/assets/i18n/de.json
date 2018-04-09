@@ -36,12 +36,13 @@
     "portfolioDesc": "Diese Webseite, erstellt mit Angular 5",
     "kitchenDesc": "Start Hack Project",
     "variousDesc": "Verschiedene einfache Webseiten erstellt mit Wordpress",
-    "reportDesc": "Tool zur automatischen Erstellung von Zeitabrechnungen aus Support Tickets (OTRS)",
-    "appDesc": "Entwicklung internes iOS app",
+    "reportDesc": "Tool zur automatischen Erstellung von Zeitabrechnungen aus Support Tickets (OTRS) @ NYP",
+    "appDesc": "Entwicklung internes iOS app @ NYP",
     "cpuDesc": "Schulprojekt: Erstellen von CPU mit C",
-    "xelhaDesc": "Mitarbeit / stv. Scrum Master bei internem Java / Swing Projekt",
+    "xelhaDesc": "Mitarbeit / stv. Scrum Master bei internem Java / Swing Projekt @ NYP",
     "vaadinDesc": "Schulprojekt: Java, Hibernate, Vaadin https://github.com/wyssp8/ch.bfh.bti7081.s2017.blue",
     "testautoDesc": "Automatisierung von Testkorrektur",
-    "webmasterDesc": "Windows / Linux Systemadministration / Webmaster",
-    "accautoDesc": "Automatisierung von Accounterstellung / Mutationen"
+    "webmasterDesc": "Windows / Linux Systemadministration / Webmaster @ NYP",
+    "accautoDesc": "Automatisierung von Accounterstellung / Mutationen @ NYP",
+    "buildDesc":"Build Master, Testautmomatisierung @ NYP"
 }
