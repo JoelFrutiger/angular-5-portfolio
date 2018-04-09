@@ -1,5 +1,5 @@
 <mat-card>
-  <span class="title" [@flyIn]="in">Portfolio: Joël Frutiger</span>
+  <span class="title" [@flyIn]="isIn">Portfolio: Joël Frutiger</span>
   <button mat-button (click)="toggleLanguage()" class="langToggle">
     <span [ngClass]="{'selected':translate.currentLang == 'en'}">En</span>
     <span>/</span>

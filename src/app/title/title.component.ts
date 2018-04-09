@@ -17,7 +17,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./title.component.css'],
   animations: [
     trigger('flyIn', [
-      state('in', style({ width: "600px", transform: 'translateX(0)', opacity: 1 })),
+      state('isIn', style({ width: "600px", transform: 'translateX(0)', opacity: 1 })),
       transition('void => *', [
         style({ width: "0px", transform: 'translateX(30px)', opacity: 0 }),
         group([
@@ -37,7 +37,8 @@ export class TitleComponent implements OnInit {
 
 
   contents: Content[];
-  private translate;
+  public translate;
+  isIn;
 
   constructor(private contentService: ContentService, translate: TranslateService) {
     this.contents = this.contentService.getContent();
@@ -64,7 +65,7 @@ export class TitleComponent implements OnInit {
     console.log(this.translate);
   }
 
-  toggleLanguage(language: string) {
+  toggleLanguage() {
     if (this.translate.currentLang == "de") {
       this.translate.use("en");
     }
