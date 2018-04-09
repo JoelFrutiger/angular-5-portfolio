@@ -66,7 +66,7 @@
         [routerLink]="content.path">
         <!--<mat-icon class="icon" *ngIf="!content.tile.isImage">{{content.icon}}</mat-icon>-->
         <h3 *ngIf="!content.tile.isImage" translate>{{content.tile.text}}</h3>
-        <img *ngIf="content.tile.isImage" [src]="content.tile.imgPath" class="portrait" />
+        <img *ngIf="content.tile.isImage" [lazyLoad]="content.tile.imgPath" class="portrait" />
       </mat-grid-tile>
     </mat-grid-list>
   </mat-card-content>

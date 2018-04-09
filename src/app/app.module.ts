@@ -19,7 +19,8 @@ import { AboutService } from './about.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-    
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
 }
@@ -47,6 +48,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatIconModule,
     MatMenuModule,
     HttpClientModule,
+    LazyLoadImageModule,
     TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
