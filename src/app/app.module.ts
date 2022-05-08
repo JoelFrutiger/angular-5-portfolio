@@ -24,11 +24,12 @@ import { CvService } from './cv.service';
 import { AboutService } from './about.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { NgPipesModule } from 'ngx-pipes';
 
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }
 
 @NgModule({
@@ -55,13 +56,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatMenuModule,
     HttpClientModule,
     LazyLoadImageModule,
+    NgPipesModule,
     TranslateModule.forRoot({
-        loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-        }
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
       }
+    }
     )
   ],
   providers: [ContentService, ProjectService, ContactService, CvService, AboutService],
