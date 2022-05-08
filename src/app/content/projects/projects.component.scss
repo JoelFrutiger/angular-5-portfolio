@@ -18,7 +18,7 @@
     background-color:rgb(83, 90, 88);
 }
 .mat-expansion-panel-header.mat-expanded:focus, .mat-expansion-panel-header.mat-expanded:hover{
-    background-color:#076645;
+   // background-color:#076645;
 }
 .projImg{
     max-height:100px;
@@ -88,7 +88,6 @@ mat-expansion-panel-header{
 }
 .tagActive{
     box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
-    background-color:rgb(8, 115, 78);
     background-color: grey;
 }
 .projDesc{
@@ -98,4 +97,8 @@ mat-expansion-panel-header{
 }
 .panelWorkImg{
     line-height: 0;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
 }

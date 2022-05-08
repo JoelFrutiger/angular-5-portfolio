@@ -25,14 +25,25 @@ export class ProjectService {
   private js = new Tag("Javascript", "/assets/images/tag/js.png");
   private mysql = new Tag("MySQL", "/assets/images/tag/mysql.png");
   private jenkins = new Tag("Jenkins", "/assets/images/tag/jenkins.png");
-  private dotNet = new Tag("dotNet", "/assets/images/tag/NET-Framework-Logo.png");
+  private dotNet = new Tag(".Net", "/assets/images/tag/NET-Framework-Logo.png");
+  private tSql = new Tag("Microsoft SQL", "/assets/images/tag/tsql.png");
+  private jQuery = new Tag("jQuery", "/assets/images/tag/jQuery.png");
+  private unrealEngine = new Tag("Unreal Engine", "/assets/images/tag/unreal.png");
+  private cplusplus = new Tag("C++", "/assets/images/tag/cplusplus.png");
+  private darfRiftNetworking = new Tag("Dark Rift Networking", "/assets/images/tag/dr.png", 8);
 
   getProjects() {
     return [
-      new Project("3V-Rooms", "roomsDesc", [this.cSharp, this.dotNet],
-        ["https://store.steampowered.com/app/557461/ToledoVR/"], "/assets/images/project/toledovr.png"),
+      new Project("3V-ROOMS", "roomsDesc", [this.cSharp, this.dotNet, this.tSql, this.jQuery, this.angular],
+        ["https://3v-rooms.ch"]),
       new Project("ToledoVR", "toledoDesc", [this.cSharp, this.unity],
         ["https://store.steampowered.com/app/557461/ToledoVR/"], "/assets/images/project/toledovr.png"),
+      new Project("Hololens for machine maintenance", "hololensDesc", [this.cSharp, this.unity],
+        ["https://bfh.easydocmaker.ch/media/pdf_final/2432_joel-paul_frutiger.pdf"]),
+      new Project("GreatSiege", "greatSiegeDesc", [this.cSharp, this.unity],
+      ),
+      new Project("Stratigos", "stratigosDesc", [this.cSharp, this.unity, this.darfRiftNetworking]
+      ),
       new Project("Cryptocurrency review", "cryptoDesc", [this.angular, this.php, this.js, this.ts, this.mysql],
         ["https://cryptreview.com"], "/assets/images/project/ccr.png"),
       new Project("Manage goals", "manageDesc", [this.android, this.java, this.nodejs, this.couchbase, this.js, this.mysql],
@@ -40,6 +51,8 @@ export class ProjectService {
       new Project("Kitchen pad", "kitchenDesc", [this.angular, this.js],
         ["https://devpost.com/software/kitchen-pad"], "/assets/images/project/kitchenpad.png"),
       new Project("Portfolio", "portfolioDesc", [this.angular, this.ts], ["https://github.com/JoelFrutiger/angular-5-portfolio"]),
+      new Project("Various Unreal Engine projects", "unrealDesc", [this.cplusplus, this.unrealEngine]
+      ),
       new Project("Various school/work proj.", "", [this.java, this.angular, this.android, this.ios, this.swift, this.php, this.c, this.powershell, this.python, this.bash, this.js, this.mysql, this.jenkins],
         ["https://github.com/JoelFrutiger"]),
       new Project("Various websites", "variousDesc", [this.wordpress, this.mysql],

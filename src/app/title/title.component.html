@@ -1,6 +1,6 @@
 <mat-card>
   <span class="title" [@flyIn]="isIn">Portfolio: Joël Frutiger</span>
-  <button mat-button (click)="toggleLanguage()" class="langToggle">
+  <button mat-raised-button (click)="toggleLanguage()" class="langToggle">
     <span [ngClass]="{'selected':translate.currentLang == 'en'}">EN</span>
     <span> / </span>
     <span [ngClass]="{'selected':translate.currentLang == 'de'}">DE</span>

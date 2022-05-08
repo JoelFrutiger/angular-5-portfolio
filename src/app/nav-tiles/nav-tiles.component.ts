@@ -13,7 +13,7 @@ import { Content } from '../content/content';
 @Component({
   selector: 'app-nav-tiles',
   templateUrl: './nav-tiles.component.html',
-  styleUrls: ['./nav-tiles.component.css'],
+  styleUrls: ['./nav-tiles.component.scss'],
   animations: [
     trigger('hoverState', [
       state('inactive', style({
