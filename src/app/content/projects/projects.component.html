@@ -31,11 +31,12 @@
       </div>
     </div>
     <p>
-      <mat-table #table *ngIf="project.desc == ''" [dataSource]="workProjects" class="color1bg">
+      <mat-table #table *ngIf="project.subProjects" [dataSource]="project.subProjects" class="color1bg">
         <ng-container matColumnDef="position">
           <mat-header-cell *matHeaderCellDef></mat-header-cell>
           <mat-cell *matCellDef="let element" class="panelWorkImg">
             <img *ngFor="let tag of element.tags" class="panelWorkImg panelImg" [src]="tag.imgPath" />
+            <a [href]="element.url | safe" *ngIf="element.url">Find out more</a>
           </mat-cell>
         </ng-container>
         <ng-container matColumnDef="name">
@@ -47,23 +48,18 @@
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>
     </p>
-    <iframe *ngIf="project.name == 'ToledoVR'" width="560" height="315" src="https://www.youtube.com/embed/36seVOeBBAU"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-    <iframe *ngIf="project.name == 'GreatSiege Unity Dots project'" width="560" height="315"
-      src="https://www.youtube.com/embed/Ml0uSAqjbtk" title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-    <iframe *ngIf="project.name == 'Hololens for machine maintenance'" width="560" height="315"
-      src="https://www.youtube.com/embed/DrZ3SKnt4hE" title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
+    <div *ngIf="project.largeImagePath">
+      <img class="largeImgProj " [src]="project.largeImagePath" />
+    </div>
+    <div *ngIf="project.youtubeUrlPath">
+      <iframe width="560" height="315" [src]="project.youtubeUrlPath | safe" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
     <p>
       <a *ngFor="let url of project.url" class="projUrl" [href]="url">
         <p>{{url}}</p>
       </a>
-
     </p>
   </mat-expansion-panel>
 </mat-card>

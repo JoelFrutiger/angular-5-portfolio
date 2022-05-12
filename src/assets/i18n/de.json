@@ -33,7 +33,7 @@
   "toledoDesc": "ToledoVR ist ein Action/Strategie Spiel für die HTC Vive. Spiele als Gott von oben and kämpfe als Held auf dem Boden. Spielbar in VR und auf dem PC gleichzeitig (lokaler Multiplayer).",
   "cryptoDesc": "Ein ort zum lesen und schreiben von Bewertungen für Kryptowährungen. Jede Bewertung wird verifiziert und gute Bewertungen werden belohnt.",
   "manageDesc": "Goal Manager (abgestellt wegen Serverkosten)",
-  "portfolioDesc": "Diese Webseite, erstellt mit Angular 5",
+  "portfolioDesc": "Diese Webseite, komplett eingenständig erstellt mit Angular",
   "kitchenDesc": "Start Hack Projekt",
   "variousDesc": "Verschiedene einfache Webseiten erstellt mit Wordpress",
   "reportDesc": "Tool zur automatischen Erstellung von Zeitabrechnungen aus Support Tickets (OTRS) @ NYP",
@@ -44,5 +44,15 @@
   "testautoDesc": "Automatisierung von Testkorrektur",
   "webmasterDesc": "Windows / Linux Systemadministration / Webmaster @ NYP",
   "accautoDesc": "Automatisierung von Accounterstellung / Mutationen @ NYP",
-  "buildDesc": "Build Master, Testautmomatisierung @ NYP"
+  "buildDesc": "Build Master, Testautmomatisierung @ NYP",
+  "3vol": "Anstellung bei 3volutions AG, Bern als Softwareentwickler, Mitentwicklung 3V-ROOMS Software (Backend / Frontend), Planung und Durchführung diverser grösseren und kleineren Projekte, Bearbeiten von Supportanfragen",
+  "Various Unreal Engine projects": "Versch. Unreal Engine Projekte",
+  "roomsDesc": "Mit und weiterentwicklung von 3V-ROOMS (Frontend/Backend), planen und durchführen von diversen kleineren und grösseren Projekte. 3V-ROOMS ist die Software-Lösung zur Optimierung des Such- und Reservationsprozesses von Räumlichkeiten und Equipment.",
+  "hololensDesc": "Bachelor Thesis, BSc in Informatik: Mit dem in der Arbeit erstellten System bestehend aus einer Webseite für den Support, einer HoloLens Applikation und der für die Kommunikation benötigten Serverkomponente können Wartungsarbeiten an komplexen Maschinen, ressourcen- und zeitsparend, weltweit aus der Ferne unterstützt werden.",
+  "greatSiegeDesc": "Projekt um UNITY DOTS Tech stack und diverse andere Technologien zu testen.",
+  "stratigosDesc": "Stratigos ist ein multiplayer Strategiespiel, welches Rundenbasierte und Echtzeitstrategie verbindet.",
+  "udemyCourseDesc": "Udemy Kurs zu Unreal Engine",
+  "bfmeReforgedDesc": "Kurze mitarbeit bei BFME Reforged",
+  "shaderDesc": "Spezieller shader für Einheitgruppen anzuzeigen bei Strategiespielen",
+  "ue5ProjDesc": "Kleines Projekt um Unreal 5 zu testen"
 }

@@ -27,6 +27,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { NgPipesModule } from 'ngx-pipes';
+import { SafePipe } from './safe.pipe';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -40,7 +41,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProjectsComponent,
     TitleComponent,
     WorkComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

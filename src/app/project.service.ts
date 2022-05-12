@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Tag } from './content/projects/tag';
 import { Project } from './content/projects/project';
 import { WorkProject } from './content/projects/workProject';
+import { GeneralProject } from './content/projects/generalProject';
 
 @Injectable()
 export class ProjectService {
@@ -30,19 +31,19 @@ export class ProjectService {
   private jQuery = new Tag("jQuery", "/assets/images/tag/jQuery.png");
   private unrealEngine = new Tag("Unreal Engine", "/assets/images/tag/unreal.png");
   private cplusplus = new Tag("C++", "/assets/images/tag/cplusplus.png");
-  private darfRiftNetworking = new Tag("Dark Rift Networking", "/assets/images/tag/dr.png", 8);
+  private darfRiftNetworking = new Tag("DR Networking", "/assets/images/tag/dr.png", 8);
 
   getProjects() {
     return [
       new Project("3V-ROOMS", "roomsDesc", [this.cSharp, this.dotNet, this.tSql, this.jQuery, this.angular],
-        ["https://3v-rooms.ch"]),
+        ["https://3v-rooms.ch", "https://ffhs"]),
       new Project("ToledoVR", "toledoDesc", [this.cSharp, this.unity],
-        ["https://store.steampowered.com/app/557461/ToledoVR/"], "/assets/images/project/toledovr.png"),
+        ["https://store.steampowered.com/app/557461/ToledoVR/"], "/assets/images/project/toledovr.png", '', 'https://www.youtube.com/embed/36seVOeBBAU'),
       new Project("Hololens for machine maintenance", "hololensDesc", [this.cSharp, this.unity],
-        ["https://bfh.easydocmaker.ch/media/pdf_final/2432_joel-paul_frutiger.pdf"]),
-      new Project("GreatSiege", "greatSiegeDesc", [this.cSharp, this.unity],
+        ["https://bfh.easydocmaker.ch/media/pdf_final/2432_joel-paul_frutiger.pdf"], '', '', 'https://www.youtube.com/embed/DrZ3SKnt4hE'),
+      new Project("GreatSiege", "greatSiegeDesc", [this.cSharp, this.unity], [], '', '', 'https://www.youtube.com/embed/Ml0uSAqjbtk'
       ),
-      new Project("Stratigos", "stratigosDesc", [this.cSharp, this.unity, this.darfRiftNetworking]
+      new Project("Stratigos", "stratigosDesc", [this.cSharp, this.unity, this.darfRiftNetworking], [], '', '/assets/images/project/stratigos2.png'
       ),
       new Project("Cryptocurrency review", "cryptoDesc", [this.angular, this.php, this.js, this.ts, this.mysql],
         ["https://cryptreview.com"], "/assets/images/project/ccr.png"),
@@ -51,27 +52,36 @@ export class ProjectService {
       new Project("Kitchen pad", "kitchenDesc", [this.angular, this.js],
         ["https://devpost.com/software/kitchen-pad"], "/assets/images/project/kitchenpad.png"),
       new Project("Portfolio", "portfolioDesc", [this.angular, this.ts], ["https://github.com/JoelFrutiger/angular-5-portfolio"]),
-      new Project("Various Unreal Engine projects", "unrealDesc", [this.cplusplus, this.unrealEngine]
+      new Project("Various Unreal Engine projects", "", [this.cplusplus, this.unrealEngine], null, null, null, null, this.getUnrealProjects()
       ),
       new Project("Various school/work proj.", "", [this.java, this.angular, this.android, this.ios, this.swift, this.php, this.c, this.powershell, this.python, this.bash, this.js, this.mysql, this.jenkins],
-        ["https://github.com/JoelFrutiger"]),
+        ["https://github.com/JoelFrutiger"], null, null, null, this.getWorkProjects()),
       new Project("Various websites", "variousDesc", [this.wordpress, this.mysql],
         ["https://somedudes.ch", "http://oeko-tec.ch"])
     ];
 
   }
 
+  getUnrealProjects() {
+    return [
+      new GeneralProject("udemyCourseDesc", 'assets/pdfs/udemyCert.pdf'),
+      new GeneralProject("bfmeReforgedDesc", 'https://github.com/JoelFrutiger/saruman-project'),
+      new GeneralProject("shaderDesc", 'assets/images/project/UnitMarkerOutline.PNG'),
+      new GeneralProject("ue5ProjDesc", 'assets/images/project/ue5test.png'),
+    ]
+  }
+
   getWorkProjects() {
     return [
-      new WorkProject([this.angular], "reportDesc"),
-      new WorkProject([this.ios, this.swift], "appDesc"),
-      new WorkProject([this.c], "cpuDesc"),
-      new WorkProject([this.java], "xelhaDesc"),
-      new WorkProject([this.java], "vaadinDesc"),
-      new WorkProject([this.python], "testautoDesc"),
-      new WorkProject([this.bash, this.mysql], "webmasterDesc"),
-      new WorkProject([this.powershell], "accautoDesc"),
-      new WorkProject([this.jenkins], "buildDesc")
+      new WorkProject("reportDesc", [this.angular]),
+      new WorkProject("appDesc", [this.ios, this.swift]),
+      new WorkProject("cpuDesc", [this.c]),
+      new WorkProject("xelhaDesc", [this.java]),
+      new WorkProject("vaadinDesc", [this.java]),
+      new WorkProject("testautoDesc", [this.python]),
+      new WorkProject("webmasterDesc", [this.bash, this.mysql]),
+      new WorkProject("accautoDesc", [this.powershell]),
+      new WorkProject("buildDesc", [this.jenkins])
     ]
   }
 }
