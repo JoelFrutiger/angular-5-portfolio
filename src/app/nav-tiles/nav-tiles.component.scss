@@ -1,0 +1,20 @@
+.content {
+    overflow-x: hidden;
+    display:block;
+    background:white;
+    margin-left:auto;
+    margin-right:auto;
+}
+.portrait{
+    max-width: 100%;
+    position: absolute;
+    top:0px;
+    max-height:350px;
+}
+.icon{
+    position: absolute;
+    top:10px;
+}
+.navTile{
+  border: solid thin;
+}

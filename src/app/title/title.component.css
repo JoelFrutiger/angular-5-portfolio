@@ -14,7 +14,6 @@
         font-family: 'Raleway',sans-serif !important;
         font-size: 50px;
         height:60px;
-        color: rgb(8, 115, 78);
         word-break: break-all;
     }
 }
@@ -30,15 +29,11 @@
         overflow-y: hidden;
         font-family: 'Raleway',sans-serif !important;
         font-size: 20px;
-        color: rgb(8, 115, 78);
         word-break: break-all;
     }
-}
-.buttonColor{
-    background-color:#373B3A;
-}
-.langToggle{
-    background-color: transparent;
+    .langToggle{
+      margin-left: 10px;
+    }
 }
 .selected{
     font-weight: bold;

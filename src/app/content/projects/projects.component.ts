@@ -6,7 +6,7 @@ import { ProjectService } from '../../project.service';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
 
@@ -16,8 +16,11 @@ export class ProjectsComponent implements OnInit {
   filterActive = false;
   workProjects = [];
   displayedColumns = [];
+  customComparator(itemA, itemB) {
+    return itemA > itemB ? 1 : -1;
+  }
 
-  constructor(public projectService: ProjectService){
+  constructor(public projectService: ProjectService) {
     this.projects = this.projectService.getProjects()
     this.projects.forEach(project => {
       project.tags.forEach(tag => {

@@ -1,10 +1,11 @@
 
 import { Type } from '@angular/core';
+import { SubProject } from './subProject';
 import { Tag } from './tag';
 
 
-export class WorkProject {
+export class WorkProject implements SubProject {
 
-  constructor(public tags:Tag[],public desc ) { }
+  constructor(public desc, public tags: Tag[]) { }
 
 }

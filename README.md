@@ -1,6 +1,6 @@
 # Portfolio
 
-Simple portfolio created by Joël Frutiger with Angular 5.
+Simple portfolio created by Joël Frutiger.
 
 https://joel-frutiger.somedudes.ch
 
