@@ -36,7 +36,7 @@ export class ProjectService {
   getProjects() {
     return [
       new Project("3V-ROOMS", "roomsDesc", [this.cSharp, this.dotNet, this.tSql, this.jQuery, this.angular],
-        ["https://3v-rooms.ch", "https://ffhs"]),
+        ["https://3v-rooms.ch", "https://www.ffhs.ch/de/raum-mieten#/search"]),
       new Project("ToledoVR", "toledoDesc", [this.cSharp, this.unity],
         ["https://store.steampowered.com/app/557461/ToledoVR/"], "/assets/images/project/toledovr.png", '', 'https://www.youtube.com/embed/36seVOeBBAU'),
       new Project("Hololens for machine maintenance", "hololensDesc", [this.cSharp, this.unity],
